@@ -1,0 +1,5 @@
+node_modules/
+.env
+encryptoio-backend/.env
+encryptoio-frontend/.env
+dist/
