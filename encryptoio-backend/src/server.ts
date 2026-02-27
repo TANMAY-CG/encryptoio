@@ -3,7 +3,10 @@ import dotenv from "dotenv";
 import cors from "cors";
 import helmet from "helmet";
 import rateLimit from "express-rate-limit";
-
+import { connectDB } from "./config/db";
+import { webhookHandler } from "./routes/webhook";
+import adminRoutes from "./routes/admin";
+import userRoutes from "./routes/user";
 dotenv.config();
 
 const app = express();
@@ -18,6 +21,12 @@ app.use(
   })
 );
 
+app.post(
+  "/webhook/clerk",
+  express.raw({ type: "application/json" }),
+  webhookHandler
+);
+
 app.use(express.json());
 
 const limiter = rateLimit({
@@ -26,11 +35,14 @@ const limiter = rateLimit({
 });
 
 app.use(limiter);
-
+app.use("/admin", adminRoutes);
+app.use("/user", userRoutes);
 // Health check route
 app.get("/", (req, res) => {
   res.status(200).json({ message: "Encrypto.io backend running" });
 });
+
+connectDB();
 
 const PORT = process.env.PORT || 3000;
 

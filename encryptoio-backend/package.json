@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-"scripts": {
-  "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-  "build": "tsc",
-  "start": "node dist/server.js"
-},
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -22,6 +22,7 @@
     "helmet": "^8.1.0",
     "mongoose": "^8.23.0",
     "socket.io": "^4.8.3",
+    "svix": "^1.86.0",
     "zod": "^4.3.6"
   },
   "devDependencies": {

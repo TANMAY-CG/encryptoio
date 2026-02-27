@@ -1,0 +1,163 @@
+.loadingWrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accessDeniedWrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+}
+
+.accessDeniedTitle {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.accessDeniedText {
+  color: #555;
+}
+
+.errorWrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.errorText {
+  color: #b91c1c;
+}
+
+.wrapper {
+  min-height: 100vh;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.logoutBtn {
+  background: transparent;
+  border: none;
+  color: red;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.title {
+  font-size: 42px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.card {
+  width: 75%;
+  max-width: 1000px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.theadRow {
+  background-color: #fafafa;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.thLeft {
+  text-align: left;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.thRight {
+  text-align: right;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.emptyCell {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+.bodyRow {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.tdName {
+  padding: 20px;
+  font-size: 16px;
+}
+
+.tdAction {
+  padding: 20px;
+  text-align: right;
+}
+
+.actions {
+  display: inline-flex;
+  gap: 14px;
+}
+
+.btnDisprove {
+  padding: 8px 22px;
+  border-radius: 999px;
+  border: none;
+  background-color: #111;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btnDisprove:disabled {
+  cursor: default;
+}
+
+.btnApprove {
+  padding: 8px 22px;
+  border-radius: 999px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btnApprove:disabled {
+  cursor: default;
+}
